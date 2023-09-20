@@ -1,3 +1,3 @@
 ﻿using Gremlin.Net.Driver;
 
-var client = new GremlinServer("", 0);
+var client = new GremlinServer("https://localhost", 0);
