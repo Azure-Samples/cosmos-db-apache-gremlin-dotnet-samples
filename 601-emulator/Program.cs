@@ -1,6 +1,5 @@
 ﻿// <imports>
 using Gremlin.Net.Driver;
-using Gremlin.Net.Structure.IO.GraphSON;
 // </imports>
 
 // <client>
@@ -13,7 +12,7 @@ var server = new GremlinServer(
 
 using var client = new GremlinClient(
     gremlinServer: server,
-    messageSerializer: new GraphSON2MessageSerializer()
+    messageSerializer: new Gremlin.Net.Structure.IO.GraphSON.GraphSON2MessageSerializer()
 );
 // </client>
 
