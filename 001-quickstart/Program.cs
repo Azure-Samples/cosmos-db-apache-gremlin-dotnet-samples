@@ -15,12 +15,14 @@ var server = new GremlinServer(
     password: $"{accountKey}",
     enableSsl: true
 );
+// </authenticate_client>
 
+// <connect_client>
 using var client = new GremlinClient(
     gremlinServer: server,
     messageSerializer: new Gremlin.Net.Structure.IO.GraphSON.GraphSON2MessageSerializer()
 );
-// </authenticate_client>
+// </connect_client>
 
 // <create_vertices_1>
 await client.SubmitAsync(
