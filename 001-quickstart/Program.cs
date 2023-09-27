@@ -24,6 +24,12 @@ using var client = new GremlinClient(
 );
 // </connect_client>
 
+// <drop_graph>
+await client.SubmitAsync(
+    requestScript: "g.V().drop()"
+);
+// </drop_graph>
+
 // <create_vertices_1>
 await client.SubmitAsync(
     requestScript: "g.addV('product').property('id', '68719518371').property('name', 'Kiama classic surfboard').property('price', 285.55).property('category', 'surfboards')"
